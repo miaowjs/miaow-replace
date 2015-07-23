@@ -1,4 +1,8 @@
-module.exports = function (option, cb) {
+var mutil = require('miaow-util');
+
+var pkg = require('./package.json');
+
+function replace(option, cb) {
   var replaceInfoList = option.replace || [];
   var contents = this.contents.toString();
 
@@ -8,4 +12,6 @@ module.exports = function (option, cb) {
 
   this.contents = new Buffer(contents);
   cb();
-};
+}
+
+module.exports = mutil.plugin(pkg.name, pkg.version, replace);
