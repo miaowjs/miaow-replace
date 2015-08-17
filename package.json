@@ -1,7 +1,7 @@
 {
   "name": "miaow-replace",
   "description": "Miaow的字符替换工具 ",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "miaowjs/miaow-replace",
   "author": {
     "name": "anhulife",
@@ -13,10 +13,10 @@
     "replace"
   ],
   "dependencies": {
-    "miaow-util": "~0.4.0"
+    "miaow-util": "~0.6.1"
   },
   "devDependencies": {
-    "miaow": "^2.4.1",
+    "miaow": "^4.0.0",
     "mocha": "^2.2.4"
   },
   "scripts": {
