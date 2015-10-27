@@ -1,17 +1,18 @@
-var mutil = require('miaow-util');
-
 var pkg = require('./package.json');
 
-function replace(option, cb) {
-  var replaceInfoList = option.replace || [];
-  var contents = this.contents.toString();
+module.exports = function(options, callback) {
+  var context = this;
+  var replaceInfoList = options.replace || [];
+  var contents = context.contents.toString();
 
-  replaceInfoList.forEach(function (info) {
+  replaceInfoList.forEach(function(info) {
     contents = contents.replace(info.test, info.value);
   });
 
-  this.contents = new Buffer(contents);
-  cb();
-}
+  context.contents = new Buffer(contents);
+  callback();
+};
 
-module.exports = mutil.plugin(pkg.name, pkg.version, replace);
+module.exports.toString = function() {
+  return [pkg.name, pkg.version].join('@');
+};
