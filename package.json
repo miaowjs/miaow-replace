@@ -1,7 +1,7 @@
 {
   "name": "miaow-replace",
   "description": "Miaow的字符替换工具 ",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": "miaowjs/miaow-replace",
   "author": {
     "name": "anhulife",
