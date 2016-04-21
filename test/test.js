@@ -29,6 +29,6 @@ describe('miaow-replace', function() {
   });
 
   it('替换成功', function() {
-    assert.equal(find(log.modules, {src: 'foo.js'}).destHash, 'b15db9d19c427998217db870f41aecb6');
+    assert.equal(find(log.modules, {src: 'foo.js'}).destHash, '62f5e809f02302964f2e8f1b7f3a9f09');
   });
 });

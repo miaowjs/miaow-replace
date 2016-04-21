@@ -5,3 +5,5 @@ if (__debug__) {
 if (__debug__) {
   console.log('also debug');
 }
+
+console.log('__domain__');

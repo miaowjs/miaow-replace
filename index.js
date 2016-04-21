@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var pkg = require('./package.json');
 
 module.exports = function(options, callback) {
@@ -6,7 +7,8 @@ module.exports = function(options, callback) {
   var contents = context.contents.toString();
 
   replaceInfoList.forEach(function(info) {
-    contents = contents.replace(info.test, info.value);
+    var value = _.template(info.value)(context);
+    contents = contents.replace(info.test, value);
   });
 
   context.contents = new Buffer(contents);

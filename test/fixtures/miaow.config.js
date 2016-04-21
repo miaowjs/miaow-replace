@@ -26,6 +26,10 @@ module.exports = {
               {
                 test: /__debug__/g,
                 value: 'false'
+              },
+              {
+                test: '__domain__',
+                value: '<%= domain %>'
               }
             ]
           }
