@@ -13,7 +13,7 @@
     "replace"
   ],
   "dependencies": {
-    "lodash": "~4.11.1"
+    "lodash": "4.11.2"
   },
   "devDependencies": {
     "miaow": "^5.0.0",
